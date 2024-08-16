@@ -11,7 +11,7 @@ function CreateData() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    axios.post('http://localhost:5000/create', { name, email, address })
+    axios.post('https://crud-app-7ghp.onrender.com/create', { name, email, address })
     .then(res => {
       console.log(res);
       navigate('/');

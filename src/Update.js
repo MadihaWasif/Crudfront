@@ -12,7 +12,7 @@ function Update() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    axios.put('http://localhost:5000/update/'+id, { name, email, address })
+    axios.put('https://crud-app-7ghp.onrender.com/update/'+id, { name, email, address })
     .then(res => {
       console.log(res);
       navigate('/');

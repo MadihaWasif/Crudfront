@@ -5,13 +5,13 @@ import {Link} from 'react-router-dom'
 function Student() {
     const[student, setStudent] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/')
+        axios.get('https://crud-app-7ghp.onrender.com/')
             .then(res => setStudent(res.data))
             .catch(err => console.log(err))
     })
     const handleDelete = async (id) => {
         try {
-            await axios.delete('http://localhost:5000/student/'+id)
+            await axios.delete('https://crud-app-7ghp.onrender.com/'+id)
             window.location.reload();
         }catch(err) {
             console.log(err);
